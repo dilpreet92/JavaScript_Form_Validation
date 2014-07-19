@@ -39,7 +39,7 @@ formFieldChecker.prototype.bindEvents = function() {
   });
 };
 function createFormChecker() {
-	var formChecker = new formFieldChecker();
+  var formChecker = new formFieldChecker();
   formChecker.bindEvents();
 }
 var loginEl = document.getElementById("loginId"),
