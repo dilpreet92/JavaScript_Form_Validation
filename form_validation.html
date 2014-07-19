@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      Form Validation Exercise
+    </title>
+    <link rel="stylesheet" type="text/css" href="form_validation.css">
+    <script type="text/javascript" src="form_validation.js" defer>
+    </script>
+  </head>
+  <body>
+    <form id="userForm">
+      <div>
+        <div id= "uppercontainer">
+          Registration Form
+        </div>
+        <table>
+          <tr>
+            <td>
+              <label>Login Id</label>
+            </td>
+            <td>
+              <input type="text" id="loginId" >
+            </td>  
+          </tr>
+          <tr>
+            <td>
+              <label>Email</label>
+            </td>
+            <td>
+              <input type="text" id="email">
+            </td>
+          </tr> 
+          <tr>
+            <td>
+              <label>Name</label>
+            </td>
+            <td>
+              <input type="text" id="name">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Timezone</label>
+            </td>
+            <td>
+              <select id="selectBox">
+                <option value="none">--select--</option>
+                <option value="GMT">GMT</option>
+                <option value="IST">IST</option>
+              </select>
+            </td>
+          </tr> 
+          <tr>
+            <td>
+              <label>Home Page</label>
+            </td>
+            <td>
+              <input type="text" id="HomePage">
+            </td>
+          </tr>
+        </table>
+        <div id= "lowerbase">
+          <label>About Me</label>
+          <br>
+          <textarea rows=15 cols="50" id="textarea"></textarea>
+          <br>
+          <input type="checkbox" id="recieveNotification">
+          <label>Recieve notifications of comments</label>
+          <br>
+          <br>
+          <label>You will be sent an email when someone posts comments to<br>
+            your Blog or Album
+          </label>
+          <br>
+          <br>
+          <span>Your password will be mailed to you</span>
+          <br>
+          <button type="submit" id="button">GO</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html> 

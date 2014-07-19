@@ -1,0 +1,23 @@
+div {
+	width : 40%;
+	margin :0 auto;
+	background-color : #F5FFD6;
+  padding-left : 2px;
+}
+#lowerbase,table {
+  width : 100%
+}
+span {
+  margin-left : 70px;
+}
+button {
+  margin-left : 174px;
+  background-color : #476B00;
+  color : white;
+}
+#uppercontainer {
+  text-align : center;
+  background-color : #476B00;
+  color : white;
+  width : 100%; 
+}
