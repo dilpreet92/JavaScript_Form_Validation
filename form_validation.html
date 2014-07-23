@@ -20,7 +20,7 @@
               <label>Login Id</label>
             </td>
             <td>
-              <input type="text" id="loginId" >
+              <input type="text" id="loginId" name="loginId">
             </td>  
           </tr>
           <tr>
@@ -28,7 +28,7 @@
               <label>Email</label>
             </td>
             <td>
-              <input type="text" id="email">
+              <input type="text" id="email" name="email">
             </td>
           </tr> 
           <tr>
@@ -36,7 +36,7 @@
               <label>Name</label>
             </td>
             <td>
-              <input type="text" id="name">
+              <input type="text" id="name" name="name">
             </td>
           </tr>
           <tr>
@@ -44,7 +44,7 @@
               <label>Timezone</label>
             </td>
             <td>
-              <select id="selectBox">
+              <select id="selectBox" name="timeZone">
                 <option value="none">--select--</option>
                 <option value="GMT">GMT</option>
                 <option value="IST">IST</option>
@@ -56,16 +56,16 @@
               <label>Home Page</label>
             </td>
             <td>
-              <input type="text" id="HomePage">
+              <input type="text" id="HomePage" name="homePage">
             </td>
           </tr>
         </table>
         <div id= "lowerbase">
           <label>About Me</label>
           <br>
-          <textarea rows=15 cols="50" id="textarea"></textarea>
+          <textarea name="aboutMe"rows=15 cols="50" id="textarea"></textarea>
           <br>
-          <input type="checkbox" id="recieveNotification">
+          <input type="checkbox" id="recieveNotification" name="checkedStatus">
           <label>Recieve notifications of comments</label>
           <br>
           <br>
@@ -76,7 +76,7 @@
           <br>
           <span>Your password will be mailed to you</span>
           <br>
-          <button type="submit" id="button">GO</button>
+          <input type="Submit" value="GO" id="button" name="submit">
         </div>
       </div>
     </form>

@@ -1,7 +1,7 @@
 div {
-	width : 40%;
-	margin :0 auto;
-	background-color : #F5FFD6;
+  width : 40%;
+  margin :0 auto;
+  background-color : #F5FFD6;
   padding-left : 2px;
 }
 #lowerbase,table {
@@ -10,7 +10,7 @@ div {
 span {
   margin-left : 70px;
 }
-button {
+#button {
   margin-left : 174px;
   background-color : #476B00;
   color : white;

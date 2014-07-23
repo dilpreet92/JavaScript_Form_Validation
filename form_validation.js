@@ -7,11 +7,11 @@ function formFieldChecker(getElements) {
   this.textAreaElement = getElements.textAreaEl;
   this.goButtonElement = getElements.goButtonEl;
   this.recieveChkElement = getElements.recieveChkEl;
-  this.valid = true;
+  this.valid = false ;
 };
 formFieldChecker.prototype.validate = function() {
-  if(this.isLoginIdValid() || this.isEmailValid() || this.isNameValid() || this.isTimezoneSelected() || this.isHomePageValid() || this.isTextareaValid() || this.isChecked()) {
-    this.valid = false;
+  if((this.isLoginIdValid()) & (this.isEmailValid()) & (this.isNameValid()) & (this.isTimezoneSelected()) & (this.isHomePageValid()) & (this.isTextareaValid()) & (this.isChecked())) {
+    this.valid = true;
   }
   return this.valid;
 };
@@ -21,12 +21,18 @@ formFieldChecker.prototype.isEmailValid = function() {
     alert("Invaild Email id");
     return false;
   }
+  else {
+    return true;
+  }
 };
 
 formFieldChecker.prototype.isNameValid = function() {
   if ((!this.nameElement.value) || (!NAME_PATT.test(this.nameElement.value))) {
     alert("Invaild name");
     return false;
+  }
+  else {
+    return true;
   }
 };
 
@@ -35,12 +41,18 @@ formFieldChecker.prototype.isHomePageValid = function() {
     alert("Please Enter valid Home Page URl");
     return false;
   }
+  else {
+    return true;
+  }
 };
 
 formFieldChecker.prototype.isTimezoneSelected = function() {
   if (!(this.selectElement.options.selectedIndex > 0)) {
     alert("Please Choose Timezone");
     return false;
+  }
+  else {
+    return true;
   }
 };
 
@@ -49,12 +61,18 @@ formFieldChecker.prototype.isTextareaValid = function() {
     alert("Please Enter details in about me for about 50 characters");
     return false;
   }
+  else {
+    return true;
+  }
 };
 
 formFieldChecker.prototype.isChecked = function() {
   if (!this.recieveChkElement.checked) {
     alert("Please check recieve Notification");
     return false;
+  }
+  else {
+    return true;
   }
 };
 
@@ -63,14 +81,16 @@ formFieldChecker.prototype.isLoginIdValid = function() {
     alert("Login id cannot be empty");
     return false;
   }
+  else {
+    return true;
+  }
 };
 
 formFieldChecker.prototype.bindEvents = function() {
   var _this = this;
-  this.goButtonElement.addEventListener("click",function(e){
-    var result = _this.validate();
-    if(!result) {
-      e.stopPropagation();
+  this.goButtonElement.addEventListener("click",function(event){
+    if(!_this.validate()) {
+      event.preventDefault();
     }
   });
 };
