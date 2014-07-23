@@ -56,6 +56,7 @@ formFieldChecker.prototype.isTimezoneSelected = function() {
   }
 };
 
+
 formFieldChecker.prototype.isTextareaValid = function() {
   if ((!this.textAreaElement.value) || (this.textAreaElement.value.length < 50)) {
     alert("Please Enter details in about me for about 50 characters");
@@ -91,7 +92,6 @@ formFieldChecker.prototype.bindEvents = function() {
   this.goButtonElement.addEventListener("click",function(event){
     if(!_this.validate()) {
       event.preventDefault();
-    }
   });
 };
 function createFormChecker(getElements) {
