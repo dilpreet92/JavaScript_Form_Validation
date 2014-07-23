@@ -89,7 +89,7 @@ formFieldChecker.prototype.isLoginIdValid = function() {
 formFieldChecker.prototype.bindEvents = function() {
   var _this = this;
   this.goButtonElement.addEventListener("click",function(event){
-    if(!_this.validate()) {
+    if (!_this.validate()) {
       event.preventDefault();
     }
   });
